@@ -19,6 +19,19 @@ const Register = () => {
     };
 
     return (
+
+        <>
+
+        <section className='registration-form'>
+
+            <div className='registration-form-inner'>
+
+                <h1>Welcome To Your IOT Registration Page</h1>
+
+
+
+
+
         <form onSubmit={handleSubmit}>
             <InputField
                 label="Name"
@@ -28,7 +41,7 @@ const Register = () => {
                 onChange={handleChange}
                 placeholder="Enter your name"
                 required
-            />
+                />
             <InputField
                 label="Email"
                 type="email"
@@ -37,7 +50,7 @@ const Register = () => {
                 onChange={handleChange}
                 placeholder="Enter your email"
                 required
-            />
+                />
             <InputField
                 label="Password"
                 type="password"
@@ -46,9 +59,13 @@ const Register = () => {
                 onChange={handleChange}
                 placeholder="Enter your password"
                 required
-            />
+                />
             <button type="submit">Register</button>
         </form>
+                </div>
+                </section>
+
+        </>
     );
 };
 
