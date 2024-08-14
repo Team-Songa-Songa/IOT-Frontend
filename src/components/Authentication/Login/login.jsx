@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import InputField from "../../Reusable_Components/inputField";
-
+import { Link } from "react-router-dom";
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -13,31 +13,40 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic
+    // Handle registration logic
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <InputField
-        label="Email"
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Enter your email"
-        required
-      />
-      <InputField
-        label="Password"
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-        placeholder="Enter your password"
-        required
-      />
-      <button type="submit">Login</button>
-    </form>
+    <section className="registration-form">
+      <div className="registration-form-inner">
+        <h1>Your IOT Login Page</h1>
+        <form onSubmit={handleSubmit}>
+          <InputField
+            label="Email"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+            required
+          />
+          <InputField
+            label="Password"
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Enter your password"
+            required
+          />
+          <div className="reg-button">
+            <Link to="/dashboard">
+              <button type="submit">Login</button>
+            </Link>
+          </div>
+        </form>
+      </div>
+    </section>
   );
 };
 

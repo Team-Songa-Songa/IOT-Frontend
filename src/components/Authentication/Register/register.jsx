@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputField from "../../Reusable_Components/inputField";
 import "./register.css";
+import { Link } from "react-router-dom";
 const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -50,7 +51,9 @@ const Register = () => {
             required
           />
           <div className="reg-button">
-            <button type="submit">Register</button>
+            <Link to="/login">
+              <button type="submit">Register</button>
+            </Link>
           </div>
         </form>
       </div>
