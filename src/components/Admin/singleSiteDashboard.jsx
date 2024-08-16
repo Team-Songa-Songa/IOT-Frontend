@@ -1,6 +1,6 @@
 import React from "react";
-
-function SingleSiteDashboardPage() {
+import "./singleSite";
+function SingleSiteDashboard() {
   return (
     <>
       <div>singleSiteDashboard</div>
@@ -8,4 +8,4 @@ function SingleSiteDashboardPage() {
   );
 }
 
-export default SingleSiteDashboardPage;
+export default SingleSiteDashboard;

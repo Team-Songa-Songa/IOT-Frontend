@@ -51,3 +51,11 @@
 .registration-form-inner form button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+
+/* Responsiveness */
+
+@media screen and (max-width: 568px) {
+  .registration-form-inner {
+    width: 90%;
+  }
+}
