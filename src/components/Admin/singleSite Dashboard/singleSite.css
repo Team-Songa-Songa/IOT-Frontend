@@ -28,10 +28,39 @@
     padding:6px;
     border-radius: 5px;
     cursor:pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 255, 0.2); /* Bluish box shadow */
+    /* transition: all 0.3s ease-in-out; */
 }
 
 .minor-navs-inner-p{
  
  text-decoration: none;
  color:black;
+}
+
+.main-dashboard{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    gap:10px;
+    margin-top:30px;
+}
+
+.upper-stats{
+
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: white;
+    height:15vh;
+    border-radius: 10px;
+    padding:10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 255, 0.2); /* Bluish box shadow */
+    transition: all 0.3s ease-in-out;
+}
+
+.upper-stats:hover {
+    background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(255, 255, 255, 1) 100%); /* Blue to white gradient */
+    color: white; /* Text color changes to white */
+    box-shadow: 0px 6px 8px rgba(0, 0, 255, 0.4); /* Slightly stronger shadow on hover */
 }

@@ -38,8 +38,8 @@ function SingleSiteDashboard() {
 
               <div className="upper-stats">
 
-                <p>1103 Hours</p>
-                <p>Operating Time Hours</p>
+                <p className="upper-stats-hours">1103 Hours</p>
+                <p className="upper-stats-text">Operating Time Hours</p>
 
               </div>
 
