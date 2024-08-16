@@ -75,3 +75,12 @@
 .upper-stats-text {
   margin-top: 20px;
 }
+
+.charts{
+    width:100%;
+    min-height:20vh;
+}
+
+.charts-p{
+    font-size:12px;
+}

@@ -48,6 +48,22 @@ function SingleSiteDashboard() {
               <p className="upper-stats-hours">1103 PF</p>
               <p className="upper-stats-text">Power Factor</p>
             </div>
+
+            <div className="upper-stats charts">
+
+              <p className="charts-p">Number of Automatic Restarts After trips vs Number of starts counter</p>
+
+              
+
+
+             
+
+
+            </div>
+
+           
+
+
           </div>
         </div>
       </section>
