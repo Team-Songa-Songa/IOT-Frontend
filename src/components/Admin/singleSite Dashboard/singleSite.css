@@ -1,3 +1,39 @@
+.single-site {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(231, 230, 230);
+}
+
+.single-site-h1 {
+  font-size: 19px;
+  text-align: center;
+}
+
+.minor-navs {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+/* Minor navigation item styling */
+.minor-navs-inner {
+  width: 100%;
+  background-color: white;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 255, 0.2); /* Bluish box shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Link styling */
+.minor-navs-inner-p {
+  text-decoration: none;
+  color: black;
+}
+
 .main-dashboard {
   display: flex;
   flex-direction: column;
@@ -16,6 +52,26 @@
   padding: 20px; /* Added padding to make space for the chart */
   box-shadow: 0px 4px 6px rgba(0, 0, 255, 0.2); /* Bluish box shadow */
   transition: all 0.3s ease-in-out;
+  min-height: 20vh;
+}
+
+.upper-stats:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 123, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ); /* Blue to white gradient */
+  color: white; /* Text color changes to white */
+  box-shadow: 0px 6px 8px rgba(0, 0, 255, 0.4); /* Slightly stronger shadow on hover */
+}
+
+.upper-stats-hours {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.upper-stats-text {
+  margin-top: 20px;
 }
 
 .charts {
