@@ -1,5 +1,6 @@
 import React from "react";
 import "./singleSite.css";
+import { Link } from "react-router-dom";
 function SingleSiteDashboard() {
   return (
     <>
@@ -13,14 +14,50 @@ function SingleSiteDashboard() {
             </h1>
 
             <div className="minor-navs">
-              <div>
-                <p>Dashboard</p>
+              <Link to='' className="minor-navs-inner-p">
+              <div className="minor-navs-inner">
+                <p >Dashboard</p>
               </div>
-              <div>
-                <p>Notifications</p>
-              </div><div>
-                <p>Management</p>
+              </Link>
+              <Link to='' className="minor-navs-inner-p">
+
+              <div className="minor-navs-inner">
+                <p >Notifications</p>
               </div>
+              </Link>
+              <Link to=''className="minor-navs-inner-p" >
+
+              <div className="minor-navs-inner">
+                <p >Management</p>
+              </div>
+              </Link>
+
+            </div>
+
+            <div className="main-dashboard">
+
+              <div className="upper-stats">
+
+                <p>1103 Hours</p>
+                <p>Operating Time Hours</p>
+
+              </div>
+
+              <div className="upper-stats">
+
+                <p>1103 Hours</p>
+                <p>Operating Time Hours</p>
+
+              </div>
+
+              <div className="upper-stats">
+
+                <p>1103 Hours</p>
+                <p>Operating Time Hours</p>
+
+              </div>
+
+
 
             </div>
 

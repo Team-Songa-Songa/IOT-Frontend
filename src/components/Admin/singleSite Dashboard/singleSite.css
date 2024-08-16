@@ -22,3 +22,16 @@
     margin-top:10px;
     justify-content: center;
 }
+.minor-navs-inner{
+    width:100%;
+    background-color: white;
+    padding:6px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.minor-navs-inner-p{
+ 
+ text-decoration: none;
+ color:black;
+}
