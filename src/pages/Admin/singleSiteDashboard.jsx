@@ -1,9 +1,9 @@
 import React from "react";
 import LineGraph from "../../components/Reusable_Components/LineGraph";
-import BarGraph from "../../components/Reusable_Components/BarGraph"
-import { Grid } from '@mui/material';
+import BarGraph from "../../components/Reusable_Components/BarGraph";
+import { Grid } from "@mui/material";
 
-
+import SingleSiteDashboard from "../../components/Admin/singleSite Dashboard/singleSiteDashboard";
 function SingleSiteDashboardPage() {
   // Example data for the graphs
   const lineChartData = {
@@ -15,8 +15,6 @@ function SingleSiteDashboardPage() {
         borderColor: "yellow",
         backgroundColor: "rgba(255, 99, 132, 0.5)",
         width: 20,
-
-
       },
       {
         label: "Dataset 2",
@@ -45,20 +43,25 @@ function SingleSiteDashboardPage() {
 
   return (
     <div>
-        <Grid container spacing={3}>
+      {/* Ryan */}
+      <SingleSiteDashboard />
+      {/* Ryan */}
 
-            <Grid item xs={12}>
-            <LineGraph data={lineChartData} />
-            </Grid>
+      {/* Myles */}
+      {/* Myles */}
 
-
-            <Grid item xs={12}>
-            <BarGraph data={barChartData} />
-            </Grid>
-
+      {/* Andrew  */}
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <LineGraph data={lineChartData} />
         </Grid>
+
+        <Grid item xs={12}>
+          <BarGraph data={barChartData} />
+        </Grid>
+      </Grid>
+      {/* Andrew */}
     </div>
-   
   );
 }
 
