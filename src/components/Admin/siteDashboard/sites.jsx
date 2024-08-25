@@ -1,12 +1,15 @@
 import React from "react";
 import "./sites.css";
 import { Link } from "react-router-dom";
+import Navbar from "../../Header/Navbar";
 
 function Sites() {
   const id = 123; // Replace this with the actual ID or pass it as a prop
 
   return (
     <>
+          <Navbar />
+
       <section className="sites-section">
         <p className="sites-section-p">Your Sites</p>
 

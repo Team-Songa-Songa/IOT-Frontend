@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import InputField from "../../Reusable_Components/inputField";
+import {useNavigate} from 'react-router-dom';
 import "./register.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import {toast} from 'react-toastify';
 const Register = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,12 +19,38 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle registration logic
+
+    if(formData.name === "" ){
+      // setEmailError("Email is required");  
+      toast.error("Name is required");    
+    } else if (formData.email === "") {
+      // setPasswordError("Password is required");
+      toast.error("Email is required");
+
+    } else if( formData.password === "") {
+      toast.error("Password is required");
+
+    } else {
+      // console.log("Login Successful");
+      toast.success("Registration Successful")
+
+      //redirect to /dashboard
+      setTimeout(() => {
+        navigate("/dashboard");
+        
+      }, 1000);
+    }
+
   };
+
+  
 
   return (
     <section className="registration-form">
       <div className="registration-form-inner">
-        <h1>Welcome To Your IOT Registration Page</h1>
+      <img src="/thick-blue-logo.svg" className="h-[60px]" alt="" />
+
+        {/* <h1>Welcome To Your IOT Registration Page</h1> */}
         <form onSubmit={handleSubmit}>
           <InputField
             label="Name"
@@ -30,7 +59,7 @@ const Register = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Enter your name"
-            required
+            // required
           />
           <InputField
             label="Email"
@@ -39,7 +68,7 @@ const Register = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="Enter your email"
-            required
+            // required
           />
           <InputField
             label="Password"
@@ -48,14 +77,18 @@ const Register = () => {
             value={formData.password}
             onChange={handleChange}
             placeholder="Enter your password"
-            required
+            // required
           />
           <div className="reg-button">
-            <Link to="/login">
+            {/* <Link to="/login"> */}
               <button type="submit">Register</button>
-            </Link>
+            {/* </Link> */}
           </div>
         </form>
+
+        <p className="text-[13px]">Already have an account?  
+        <a className="text-[#3B82F6] font-semibold" href="/"> Login Here</a>
+        </p>
       </div>
     </section>
   );

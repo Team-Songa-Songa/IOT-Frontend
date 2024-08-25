@@ -1,6 +1,6 @@
 import React from "react";
 import "./singleSite.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
