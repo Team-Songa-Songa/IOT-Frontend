@@ -39,7 +39,8 @@
   flex-direction: column;
   width: 100%;
   gap: 40px; /* Increased gap for better spacing */
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  padding-top: 40px;
 }
 
 .upper-stats {

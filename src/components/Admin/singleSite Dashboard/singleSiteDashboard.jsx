@@ -73,7 +73,7 @@ function SingleSiteDashboard() {
     <>
       <section className="single-site">
         <div className="single-site-inner">
-          <h1 className="single-site-h1">
+          {/* <h1 className="single-site-h1">
             Wanjie's Greenhouse Cabbage Control
           </h1>
 
@@ -93,7 +93,7 @@ function SingleSiteDashboard() {
                 <p>Management</p>
               </div>
             </Link>
-          </div>
+          </div> */}
 
           <div className="main-dashboard">
             <div className="upper-stats">
