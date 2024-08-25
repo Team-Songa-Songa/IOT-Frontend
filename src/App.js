@@ -14,8 +14,8 @@ function App() {
       <Router>
         <Routes>
 
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/" element={<RegisterPage />} />
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
           <Route path="/dashboard" element={<SitesPages />} />
           <Route path="/dashboard/:id" element={<SingleSiteDashboardPage />} />
           <Route path="/edit" element={<EditPage />} />

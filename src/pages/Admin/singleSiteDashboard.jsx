@@ -4,6 +4,7 @@ import BarGraph from "../../components/Reusable_Components/BarGraph";
 import Datacard from "../../components/Reusable_Components/Datacard";
 import ToggleSwitch from "../../components/Reusable_Components/ToggleSwitch";
 import Navbar from "../../components/Header/Navbar";
+import MapView from "../../components/Reusable_Components/MapView";
 import { Grid } from "@mui/material";
 
 import SingleSiteDashboard from "../../components/Admin/singleSite Dashboard/singleSiteDashboard";
@@ -43,6 +44,10 @@ function SingleSiteDashboardPage() {
       },
     ],
   };
+
+  const latitude = -1.373910; // Example latitude
+  const longitude = 36.721500; // Example longitude
+  
 
   return (
     <div>
@@ -151,7 +156,7 @@ function SingleSiteDashboardPage() {
           {/* Map Component can be added here */}
           <div className="bg-white rounded-lg shadow p-4">
             <h2 className="text-lg font-semibold mb-2">Map Location</h2>
-            <div className="w-full h-64 bg-gray-200">[Map Placeholder]</div>
+            <MapView latitude={latitude} longitude={longitude} />
           </div>
         </div>
       </div>

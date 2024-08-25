@@ -14,6 +14,7 @@ const InputField = ({
       <label htmlFor={name} className="input-label">
         {label}
       </label>
+
       <input
         type={type}
         name={name}
@@ -21,7 +22,7 @@ const InputField = ({
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        className="input-field"
+        className="input-field "
       />
     </div>
   );
