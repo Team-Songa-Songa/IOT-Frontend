@@ -4,7 +4,7 @@ import LoginPage from "./pages/Authentication/Login/login";
 import RegisterPage from "./pages/Authentication/Register/register";
 import SitesPages from "./pages/Admin/SitesPages";
 import SingleSiteDashboardPage from "./pages/Admin/singleSiteDashboard";
-import TestPage from "./pages/TestPage";
+import EditPage from "./pages/Admin/Edit";
 function App() {
   // return <div>App</div>;
 
@@ -18,6 +18,7 @@ function App() {
           <Route path="/" element={<RegisterPage />} />
           <Route path="/dashboard" element={<SitesPages />} />
           <Route path="/dashboard/:id" element={<SingleSiteDashboardPage />} />
+          <Route path="/edit" element={<EditPage />} />
 
           {/* Add more routes here */}
         </Routes>
