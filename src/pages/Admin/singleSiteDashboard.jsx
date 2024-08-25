@@ -3,6 +3,7 @@ import LineGraph from "../../components/Reusable_Components/LineGraph";
 import BarGraph from "../../components/Reusable_Components/BarGraph";
 import Datacard from "../../components/Reusable_Components/Datacard";
 import ToggleSwitch from "../../components/Reusable_Components/ToggleSwitch";
+import Navbar from "../../components/Header/Navbar";
 import { Grid } from "@mui/material";
 
 import SingleSiteDashboard from "../../components/Admin/singleSite Dashboard/singleSiteDashboard";
@@ -45,6 +46,8 @@ function SingleSiteDashboardPage() {
 
   return (
     <div>
+
+      <Navbar />
         
       
       {/* Ryan */}
@@ -52,7 +55,7 @@ function SingleSiteDashboardPage() {
       {/* Ryan */}
 
       {/* Myles */}
-      <div className="p-4 md:p-8">
+      <div className="mt-3 p-4 md:p-8">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <Datacard title="Latest Digital Data">
             <ToggleSwitch label="Local Control Mode" initialState={true} />

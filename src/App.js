@@ -2,7 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/Authentication/Login/login";
 import RegisterPage from "./pages/Authentication/Register/register";
+import SitesPages from "./pages/Admin/SitesPages";
 import SingleSiteDashboardPage from "./pages/Admin/singleSiteDashboard";
+import EditPage from "./pages/Admin/Edit";
 function App() {
   // return <div>App</div>;
 
@@ -11,9 +13,12 @@ function App() {
     <>
       <Router>
         <Routes>
+
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<RegisterPage />} />
-          <Route path="/dashboard" element={<SingleSiteDashboardPage />} />
+          <Route path="/dashboard" element={<SitesPages />} />
+          <Route path="/dashboard/:id" element={<SingleSiteDashboardPage />} />
+          <Route path="/edit" element={<EditPage />} />
 
           {/* Add more routes here */}
         </Routes>
