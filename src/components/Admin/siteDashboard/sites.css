@@ -1,41 +1,71 @@
-.sites-section{
-    width:100%;
-    min-height:100vh;
-}
-.sites-section-p{
-    font-weight:bold;
-    text-align:center;
-    margin-top:20px;
-
+.sites-section {
+  width: 100%;
+  min-height: 100vh;
 }
 
-.sites-individual{
-    display: flex;
-    flex-direction: column;
-    /* width:600px; */
+.sites-section-p {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sites-individual {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(231, 230, 230);
-margin-top:30px;
-min-height:20vh;
-border-radius: 10px;;
+  margin-top: 30px;
+  min-height: 20vh;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-.site-individual-sites{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    margin-top:20px;
-    margin-left:auto;
-    margin-right:auto;
+.site-individual-sites {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.sites-buttons{
-    display: flex;
-    margin-top:30px;
-    flex-direction: row;
-    justify-content: space-around;
-    
+.pump-name {
+  font-weight: bold;
+  font-size: 16px;
 }
-.site-buttons-left button{
-    
+
+.sites-buttons {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.site-buttons-left button,
+.site-buttons-right button {
+  padding: 6px;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  color: #007bff; /* Initial text color for the buttons */
+}
+
+.sites-individual:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 123, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.sites-individual:hover .site-individual-sites p,
+.sites-individual:hover .site-buttons-left button,
+.sites-individual:hover .site-buttons-right button {
+  color: white; /* Change text color to white on hover */
+}
+
+.sites-individual:hover .site-buttons-left button,
+.sites-individual:hover .site-buttons-right button {
+  background-color: transparent; /* Make button background transparent on hover */
+  box-shadow: none; /* Remove box shadow on hover */
 }

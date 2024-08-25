@@ -15,7 +15,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<RegisterPage />} />
           <Route path="/dashboard" element={<SitesPages />} />
-          {/* <Route path="/dashboard/:id" element={<SingleSiteDashboardPage />} /> */}
+          <Route path="/dashboard/:id" element={<SingleSiteDashboardPage />} />
 
           {/* Add more routes here */}
         </Routes>
