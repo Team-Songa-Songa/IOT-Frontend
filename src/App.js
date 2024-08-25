@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/Authentication/Login/login";
 import RegisterPage from "./pages/Authentication/Register/register";
 import SingleSiteDashboardPage from "./pages/Admin/singleSiteDashboard";
+import TestPage from "./pages/TestPage";
 function App() {
   // return <div>App</div>;
 
@@ -11,9 +12,14 @@ function App() {
     <>
       <Router>
         <Routes>
+
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/" element={<RegisterPage />} />
-          <Route path="/dashboard" element={<SingleSiteDashboardPage />} />
+
+
+            <Route path="/" element={<RegisterPage />} />
+            <Route path="/dashboard" element={<SingleSiteDashboardPage />} />
+            <Route path="/test-navbar" element={<TestPage />} />
+
 
           {/* Add more routes here */}
         </Routes>
