@@ -69,3 +69,25 @@
   background-color: transparent; /* Make button background transparent on hover */
   box-shadow: none; /* Remove box shadow on hover */
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.loading-icon {
+  animation: spin 1s linear infinite;
+  color: #007bff; /* Adjust the color as needed */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
