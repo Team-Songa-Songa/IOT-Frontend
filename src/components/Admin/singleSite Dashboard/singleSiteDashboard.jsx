@@ -3,8 +3,12 @@ import "./singleSite.css";
 import { Link } from "react-router-dom";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import MapView from "../../Reusable_Components/MapView";
 
 function SingleSiteDashboard() {
+  const latitude = -1.373910; // Example latitude
+  const longitude = 36.721500; // Example longitude
+  
   const chartOptions1 = {
     chart: {
       type: "pie",
