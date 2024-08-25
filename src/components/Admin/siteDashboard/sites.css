@@ -1,0 +1,41 @@
+.sites-section{
+    width:100%;
+    min-height:100vh;
+}
+.sites-section-p{
+    font-weight:bold;
+    text-align:center;
+    margin-top:20px;
+
+}
+
+.sites-individual{
+    display: flex;
+    flex-direction: column;
+    /* width:600px; */
+  background-color: rgb(231, 230, 230);
+margin-top:30px;
+min-height:20vh;
+border-radius: 10px;;
+}
+
+.site-individual-sites{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.sites-buttons{
+    display: flex;
+    margin-top:30px;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.site-buttons-left button{
+    
+}
