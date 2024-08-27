@@ -77,27 +77,7 @@ function SingleSiteDashboard() {
     <>
       <section className="single-site">
         <div className="single-site-inner">
-          {/* <h1 className="single-site-h1">
-            Wanjie's Greenhouse Cabbage Control
-          </h1>
-
-          <div className="minor-navs">
-            <Link to="" className="minor-navs-inner-p">
-              <div className="minor-navs-inner">
-                <p>Dashboard</p>
-              </div>
-            </Link>
-            <Link to="" className="minor-navs-inner-p">
-              <div className="minor-navs-inner">
-                <p>Notifications</p>
-              </div>
-            </Link>
-            <Link to="" className="minor-navs-inner-p">
-              <div className="minor-navs-inner">
-                <p>Management</p>
-              </div>
-            </Link>
-          </div> */}
+          
 
           <div className="main-dashboard">
             <div className="upper-stats">
@@ -120,7 +100,7 @@ function SingleSiteDashboard() {
               <p className="upper-stats-text">Power Factor</p>
             </div>
 
-            <div className="upper-stats charts">
+            {/* <div className="upper-stats charts">
               <h2>
                 Number of Automatic Restarts After Trips vs Number of Starts
                 Counter
@@ -137,7 +117,9 @@ function SingleSiteDashboard() {
                 highcharts={Highcharts}
                 options={chartOptions2}
               />
-            </div>
+            </div> */}
+
+
           </div>
         </div>
       </section>
