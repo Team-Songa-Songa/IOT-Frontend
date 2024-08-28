@@ -6,7 +6,7 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 // import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "../../Header/Navbar";
-
+import {toast, ToastContainer} from "react-toastify"
 function Sites() {
   const [sites, setSites] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -17,11 +17,13 @@ function Sites() {
       try {
         setLoading(true);
         const response = await axios.get('http://167.71.232.217:3006/230/sites');
+        console.log(response)
         setSites(response.data);
         // setSites(limitedData);
         console.log(response.data);
       } catch (err) {
         console.log(err);
+        toast.error(err.message)
         setError("An error occurred while fetching the sites.");
       } finally {
         setLoading(false);
