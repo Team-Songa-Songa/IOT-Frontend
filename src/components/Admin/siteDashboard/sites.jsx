@@ -68,7 +68,7 @@ function Sites() {
                 <div className="w-auto min-w-[100px] text-center shadow-lg p-2 bg-[#3B82F6] font-semibold text-white text-[13px] rounded-full">
                   <Link
                     className="flex justify-center items-center"
-                    to={`/dashboard/${site.site_id}`}
+                    to={`/edit/${site.site_id}`}
                   >
                     <button className="flex gap-2 text-center justify-center items-center">
                       Edit
