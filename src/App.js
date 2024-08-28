@@ -18,7 +18,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/dashboard" element={<SitesPages />} />
           <Route path="/dashboard/:id" element={<SingleSiteDashboardPage />} />
-          <Route path="/edit" element={<EditPage />} />
+          <Route path="/edit/:id" element={<EditPage />} />
 
           {/* Add more routes here */}
         </Routes>

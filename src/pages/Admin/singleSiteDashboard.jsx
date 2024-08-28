@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LineGraph from "../../components/Reusable_Components/LineGraph";
 import BarGraph from "../../components/Reusable_Components/BarGraph";
 import Datacard from "../../components/Reusable_Components/Datacard";
@@ -6,8 +6,11 @@ import ToggleSwitch from "../../components/Reusable_Components/ToggleSwitch";
 import Navbar from "../../components/Header/Navbar";
 import MapView from "../../components/Reusable_Components/MapView";
 import { Grid } from "@mui/material";
-
+import axios from 'axios';
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import SingleSiteDashboard from "../../components/Admin/singleSite Dashboard/singleSiteDashboard";
+
+
 function SingleSiteDashboardPage() {
   // Example data for the graphs
   const lineChartData = {
@@ -47,16 +50,60 @@ function SingleSiteDashboardPage() {
 
   const latitude = -1.373910; // Example latitude
   const longitude = 36.721500; // Example longitude
+
+  const [siteData, setSiteData] = useState([]);
+  const [siteParameters, setSiteParameters] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  //get the id from the url
+  const id = window.location.pathname.split("/").pop();
+  // console.log(id);
+  
+
+  useEffect(() => {
+    const fetchSites = async () => {
+      try {
+        setLoading(true);
+        const singleSite = await axios.get('http://167.71.232.217:3006/sites/' + id );
+        const singleSiteParameters = await axios.get('http://167.71.232.217:3006/sites/' + id + '/parameters');
+
+        setSiteData(singleSite.data);
+        setSiteParameters(singleSiteParameters.data);
+        // setSiteData(limitedData);
+        // console.log(response.data);
+      } catch (err) {
+        console.log(err);
+        setError("An error occurred while fetching the sites.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSites();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="loading">
+        <AiOutlineLoading3Quarters size={50} className="loading-icon" />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
   
 
   return (
-    <div>
+    <div className="bg-[#fafafa]">
 
       <Navbar />
         
       
       {/* Ryan */}
-      <SingleSiteDashboard />
+      {/* <SingleSiteDashboard /> */}
       {/* Ryan */}
 
       {/* Myles */}

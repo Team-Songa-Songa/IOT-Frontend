@@ -27,18 +27,25 @@ const Login = () => {
     
     if(formData.email === "" ){
       // setEmailError("Email is required");  
-      toast.error("Email is required");    
+      toast.error("Email is required", {
+        autoClose: 2000 // the toast will close after 5000 milliseconds, or 5 seconds
+      }); 
     } else if (formData.password === "") {
       // setPasswordError("Password is required");
-      toast.error("Password is required");
+      // toast.error("Password is required");
+      toast.error("Password is required", {
+        autoClose: 2000 // the toast will close after 5000 milliseconds, or 5 seconds
+      });
+      
     } else {
-      toast.success("Login Successful")
-
+    toast.success("Login Successful", {
+      autoClose: 2000 // the toast will close after 5000 milliseconds, or 5 seconds
+    });
       //redirect to /dashboard
       setTimeout(() => {
         navigate("/dashboard");
         
-      }, 1000);
+      }, 2000);
 
     }
   };
