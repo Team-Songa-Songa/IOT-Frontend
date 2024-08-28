@@ -16,7 +16,7 @@ function Sites() {
     const fetchSites = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://167.71.232.217:3006/230/sites');
+        const response = await axios.get('http://167.71.232.217:3006/users/230/sites');
         setSites(response.data);
         // setSites(limitedData);
         console.log(response.data);
