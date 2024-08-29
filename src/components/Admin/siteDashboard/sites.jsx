@@ -17,7 +17,8 @@ function Sites() {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://167.71.232.217:3006/users/230/sites"
+          // "http://167.71.232.217:3006/users/230/sites"
+          "https://5494-167-71-232-217.ngrok-free.app/users/230/sites"
         );
         console.log(response);
         setSites(response.data);
